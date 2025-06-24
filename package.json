@@ -8,6 +8,6 @@
     "@wdio/spec-reporter": "^9.16.2"
   },
   "scripts": {
-    "wdio": "wdio run ./wdio.conf.js"
+    "wdio": "npx wdio run ./wdio.conf.js --watch"
   }
 }

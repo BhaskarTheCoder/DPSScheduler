@@ -11,10 +11,18 @@ describe('My Login application', () => {
             'shamsuddin',
             '02/28/1957',
             '1234')
-        
-        // await expect(SecurePage.flashAlert).toBeExisting()
-        // await expect(SecurePage.flashAlert).toHaveText(
-        //     expect.stringContaining('You logged into a secure area!'))
+
+            // 'Humera', 
+            // 'jumani',
+            // '08/17/1981',
+            // '1234')
+
+            // 'Sabir', 
+            // 'Jumani',
+            // '03/14/1981',
+            // '1234')
+
+            await browser.pause(300000000000);
     })
 })
 

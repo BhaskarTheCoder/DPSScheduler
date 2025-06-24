@@ -60,10 +60,10 @@ class LoginPage extends Page {
   // ─── ACTIONS / UTILITIES ─────────────────────────────────────────────────────
   async login(firstName, lastName, dateOfBirth, lastFourSSN) {
     try {
-      await this.selectLanguage.waitForClickable({ timeout: 5000 });
+      await this.selectLanguage.waitForClickable({ timeout: 500000 });
     } catch (error) {
       await browser.reloadSession(); // OR use browser.refresh()
-      await this.selectLanguage.waitForClickable({ timeout: 5000 });
+      await this.selectLanguage.waitForClickable({ timeout: 500000 });
     }
 
     await this.selectLanguage.click();
@@ -75,25 +75,25 @@ class LoginPage extends Page {
     await browser.waitUntil(
       async () => (await this.inputLastFourSSN.getValue()) === lastFourSSN,
       {
-        timeout: 5000,
+        timeout: 50000,
         timeoutMsg: "SSN input field did not get the expected value in time",
       }
     );
 
-    await this.LoginButton.waitForClickable({ timeout: 5000 });
+    await this.LoginButton.waitForClickable({ timeout: 50000 });
     await this.LoginButton.click();
 
-    await this.newAppointment.waitForClickable({ timeout: 5000 });
+    await this.newAppointment.waitForClickable({ timeout: 50000 });
     await this.newAppointment.click();
 
-    await this.applyFirstTimeBtn.waitForClickable({ timeout: 5000 });
+    await this.applyFirstTimeBtn.waitForClickable({ timeout: 50000 });
     await this.applyFirstTimeBtn.click();
 
     await this.inputEmail.setValue("xyrus.hz@gmail.com");
     await this.inputConfirmEmail.setValue("xyrus.hz@gmail.com");
     await this.inputZip.setValue("76201");
 
-    await this.nextBtn.waitForClickable({ timeout: 5000 });
+    await this.nextBtn.waitForClickable({ timeout: 50000 });
     await this.nextBtn.click();
   }
 
