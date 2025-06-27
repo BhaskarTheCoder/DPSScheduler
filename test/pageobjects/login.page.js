@@ -91,7 +91,7 @@ class LoginPage extends Page {
 
     await this.inputEmail.setValue("xyrus.hz@gmail.com");
     await this.inputConfirmEmail.setValue("xyrus.hz@gmail.com");
-    await this.inputZip.setValue("76201");
+    await this.inputZip.setValue("75043");
 
     await this.nextBtn.waitForClickable({ timeout: 50000 });
     await this.nextBtn.click();
